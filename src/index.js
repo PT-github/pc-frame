@@ -2,7 +2,7 @@
  * @Author: PT
  * @Date: 2020-05-30 00:04:47
  * @LastEditors: PT
- * @LastEditTime: 2020-06-04 18:14:32
+ * @LastEditTime: 2020-06-05 08:33:45
  * @Description: 项目入口
  */
 import Vue from 'vue'
@@ -10,7 +10,9 @@ import App from './App'
 import './assets/css/base.css'
 import router from './router'
 
-console.log('aaaa')
+import { Button } from 'element-ui'
+
+Vue.use(Button)
 
 new Vue({
   router,

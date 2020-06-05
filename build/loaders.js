@@ -2,7 +2,7 @@
  * @Author: PT
  * @Date: 2020-06-01 15:50:32
  * @LastEditors: PT
- * @LastEditTime: 2020-06-04 12:10:47
+ * @LastEditTime: 2020-06-05 09:55:36
  * @Description: webpack的rules配置
  */
 const path = require('path')
@@ -166,7 +166,7 @@ module.exports = [
   },
   /* config.module.rule('less') */
   {
-    test: /\.less/,
+    test: /\.less$/,
     use: [
       ...baseLoader,
       {
@@ -174,7 +174,42 @@ module.exports = [
         options: {
           sourceMap: config.isDevelopment
         }
+      },
+      {
+        loader: 'style-resources-loader',
+        options: {
+          patterns: [
+            path.resolve(__dirname, '../src/assets/less/_handle.less')
+          ]
+        }
       }
+    ]
+  },
+  /* config.module.rule('scss') */
+  {
+    test: /\.(sa|sc)ss$/,
+    use: [
+      ...baseLoader,
+      {
+        loader: 'sass-loader',
+        options: {
+          sourceMap: config.isDevelopment
+        }
+      },
+      {
+        loader: 'style-resources-loader',
+        options: {
+          patterns: [
+            path.resolve(__dirname, '../src/assets/scss/_handle.scss')
+          ]
+        }
+      }
+      // {
+      //   loader: 'sass-resources-loader',
+      //   options: {
+      //     resources: path.resolve(__dirname, '../src/assets/scss/_handle.scss')
+      //   }
+      // }
     ]
   }
 ]
