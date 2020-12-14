@@ -3,12 +3,19 @@
   "plugins": [
     "@babel/plugin-transform-runtime",
     "@babel/plugin-syntax-dynamic-import",
-    [
-      "component",
-      {
-        "libraryName": "element-ui",
-        "styleLibraryName": "theme-chalk"
-      }
-    ]
+    // [
+    //   "component",
+    //   {
+    //     "libraryName": "element-ui",
+    //     "styleLibraryName": "theme-chalk"
+    //   }
+    // ]
+    // [
+    //   "component",
+    //   {
+    //     "libraryName": "con-ui",
+    //     "styleLibraryName": "theme-chalk"
+    //   }
+    // ]
   ]
 }

@@ -2,7 +2,7 @@
  * @Author: PT
  * @Date: 2020-05-31 20:46:45
  * @LastEditors: PT
- * @LastEditTime: 2020-06-04 17:59:54
+ * @LastEditTime: 2020-12-14 08:52:20
  * @Description: 入口模版
 --> 
 <template>
@@ -16,5 +16,8 @@ export default {
   name: 'APP'
 }
 </script>
-<style lang="less">
+<style lang="scss">
+#app {
+  height: 100%;
+}
 </style>
